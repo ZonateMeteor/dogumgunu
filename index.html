@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Bir doğum günü için hazırlanan, duygusal ve görsel olarak zengin bir web sayfası." />
+    <meta name="theme-color" content="#050816" />
+    <title>Doğum Günü</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="sky-overlay"></div>
+    </div>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section id="introScreen" class="intro-screen" aria-labelledby="introTitle">
+        <div class="intro-content">
+          <h1 id="introTitle" class="intro-title">Merhaba...</h1>
+          <button id="continueButton" class="intro-button" type="button">Devam</button>
+        </div>
+      </section>
+
+      <section id="contentScreen" class="content-screen" hidden>
+        <div class="content-wrapper">
+          <article class="content-card">
+            <p class="eyebrow">Bir özel gecenin kapıları açılıyor</p>
+            <h2>Bugün senin günün, güzel kalpli insan.</h2>
+            <p class="lead">
+              Bu sayfa, sevgiyi, sıcaklığı ve hafif bir dokunuş kadar büyüleyici bir atmosferi bir araya getirmek için hazırlandı.
+              Yavaş, zarif ve anlamlı bir yolculuğa davet ediliyor.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">Duygu</span>
+                <strong>İlham</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Işık</span>
+                <strong>Yıldız</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Sıcaklık</span>
+                <strong>Kalp</strong>
+              </div>
+            </div>
+
+            <p class="closing-text">
+              Her an, her nefeste, senin için güzel bir şeyin olmasını diliyorum.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
