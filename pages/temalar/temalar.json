@@ -1,0 +1,6 @@
+[
+  {"id":"t1","name":"Renkli Gündoğumu","description":"Canlı, renkli bir arka plan teması","vars":{"--bg":"#081620","--card":"#0d2330","--text":"#eaf6ff","--muted":"#9fbccf","--accent":"#ff7aa2"}},
+  {"id":"t2","name":"Yıldızlı Gece","description":"Koyu mavi tonlarında sakin tema","vars":{"--bg":"#050814","--card":"#0b1630","--text":"#dfeaff","--muted":"#9bb9da","--accent":"#6ea8ff"}},
+  {"id":"t3","name":"Pastel Aşk","description":"Pastel tonlarında sıcak tema","vars":{"--bg":"#1a0f12","--card":"#26121a","--text":"#ffeef6","--muted":"#e0bfcf","--accent":"#ffb6c1"}},
+  {"id":"t4","name":"Klasik Karanlık","description":"Sade ve koyu tema","vars":{"--bg":"#0b0e12","--card":"#0f1418","--text":"#e6eef3","--muted":"#9aa7b0","--accent":"#2d8cff"}}
+]

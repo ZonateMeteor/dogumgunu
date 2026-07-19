@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doğum Günü - Özel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="bg-anim"></div>
+  <header class="topbar">
+    <button id="hamburger" aria-label="Menüyü aç" class="hamburger" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <h1 id="site-title">Doğum Günü</h1>
+    <button id="favorites-btn" aria-label="Favoriler" class="icon-btn">♡</button>
+  </header>
+
+  <main id="app" class="wrap">
+    <section id="welcome" class="hero">
+      <div class="hero-card">
+        <h2 class="big">Merhaba...</h2>
+        <p class="lead">Bugün senin için özel bir gün. Tıkla ve mesajı gör.</p>
+        <div class="hero-actions">
+          <button id="open-message" class="btn-primary">Mesajı Göster</button>
+          <button id="more-hint" class="btn-ghost">Sol üstteki üç çizgiye bas</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav id="side-menu" class="side-menu" aria-hidden="true">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h3>Menü</h3>
+        <button id="close-menu" class="close">✕</button>
+      </div>
+      <ul>
+        <li><a href="#/siirler" data-link>Şiirler</a></li>
+        <li><a href="#/itiraflar" data-link>İtiraflar</a></li>
+        <li><a href="#/anilar" data-link>Anılar</a></li>
+        <li><a href="#/muzikler" data-link>Müzikler</a></li>
+        <li><a href="#/oyunlar" data-link>Oyunlar</a></li>
+        <li><a href="#/etimoloji" data-link>Etimoloji</a></li>
+        <li><a href="#/geribildirim" data-link>Geri Bildirim</a></li>
+        <li><a href="#/temalar" data-link>Temalar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="favorites-popup" class="popup" aria-hidden="true">
+    <h3>Favoriler</h3>
+    <ul id="favorites-list"></ul>
+    <div class="popup-foot"><button id="close-favs" class="btn-ghost">Kapat</button></div>
+  </div>
+
+  <div id="overlay" class="overlay" data-role="overlay"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/games/snake.js"></script>
+  <script src="js/games/2048.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
