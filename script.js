@@ -5,6 +5,12 @@
   const continueButton = document.getElementById("continueButton");
   const cursorGlow = document.querySelector(".cursor-glow");
   const ambientLayer = document.querySelector(".ambient");
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+  const panels = Array.from(document.querySelectorAll(".panel"));
+  const muteButton = document.querySelector(".mute-toggle");
+  const muteIcon = muteButton?.querySelector(".mute-icon");
 
   let audioStarted = false;
   let audioContext;
@@ -12,16 +18,17 @@
   let filter;
   let musicTimer;
   let buttonTimer;
+  let isMuted = false;
 
   function buildAtmosphere() {
-    const starCount = 48;
-    const particleCount = 32;
+    const starCount = 56;
+    const particleCount = 38;
     const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < starCount; i += 1) {
       const star = document.createElement("span");
       star.className = "star";
-      const size = 0.12 + Math.random() * 0.25;
+      const size = 0.1 + Math.random() * 0.24;
       const left = Math.random() * 100;
       const top = Math.random() * 100;
       const delay = Math.random() * 4;
@@ -37,7 +44,7 @@
       particle.className = "particle";
       const left = Math.random() * 100;
       const top = Math.random() * 100;
-      const size = 0.18 + Math.random() * 0.24;
+      const size = 0.16 + Math.random() * 0.24;
       particle.style.left = `${left}%`;
       particle.style.top = `${top}%`;
       particle.style.width = `${size}rem`;
@@ -115,11 +122,51 @@
     scheduleLoop();
   }
 
-  function enterExperience() {
-    if (contentScreen.hidden) {
-      contentScreen.hidden = false;
+  function setActivePanel(targetId) {
+    panels.forEach((panel) => {
+      const isActive = panel.id === targetId;
+      panel.classList.toggle("active", isActive);
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.dataset.target === targetId);
+    });
+  }
+
+  function toggleNavigation() {
+    const isOpen = mainNav.classList.toggle("is-open");
+    navToggle.classList.toggle("is-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  function closeNavigation() {
+    mainNav.classList.remove("is-open");
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function toggleMute() {
+    if (!audioStarted) {
+      startAmbientMusic();
     }
 
+    if (!masterGain) {
+      return;
+    }
+
+    isMuted = !isMuted;
+    const now = audioContext.currentTime;
+    const target = isMuted ? 0.0001 : 0.25;
+    masterGain.gain.cancelScheduledValues(now);
+    masterGain.gain.setTargetAtTime(target, now, 0.16);
+
+    muteButton.classList.toggle("is-muted", isMuted);
+    muteButton.setAttribute("aria-pressed", String(isMuted));
+    muteIcon.textContent = isMuted ? "🔈" : "🔊";
+  }
+
+  function enterExperience() {
+    contentScreen.hidden = false;
     introScreen.classList.add("is-faded");
     contentScreen.classList.add("is-visible");
     setTimeout(() => {
@@ -131,6 +178,17 @@
     startAmbientMusic();
     enterExperience();
   });
+
+  navToggle.addEventListener("click", toggleNavigation);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const targetId = link.dataset.target;
+      setActivePanel(targetId);
+      closeNavigation();
+    });
+  });
+
+  muteButton.addEventListener("click", toggleMute);
 
   window.addEventListener("pointermove", animateCursor);
   window.addEventListener("load", () => {
