@@ -1,0 +1,7 @@
+[
+  {"id":"m1","file":"sample1.mp3","title":"Sample 1","description":"Örnek müzik 1","cover":"sample1.txt"},
+  {"id":"m2","file":"sample2.mp3","title":"Sample 2","description":"Örnek müzik 2","cover":"sample2.txt"},
+  {"id":"m3","file":"sample3.mp3","title":"Sample 3","description":"Örnek müzik 3","cover":"sample3.txt"},
+  {"id":"m4","file":"sample4.mp3","title":"Sample 4","description":"Örnek müzik 4","cover":"sample4.txt"},
+  {"id":"m5","file":"sample5.mp3","title":"Sample 5","description":"Örnek müzik 5","cover":"sample5.txt"}
+]

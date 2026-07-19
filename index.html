@@ -1,115 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Cinematic, premium ve mobil odaklı bir doğum günü web sitesi." />
-    <meta name="theme-color" content="#040814" />
-    <title>Jinda'nın Özel Günü</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="ambient" aria-hidden="true">
-      <div class="aurora aurora-one"></div>
-      <div class="aurora aurora-two"></div>
-      <div class="glow glow-one"></div>
-      <div class="glow glow-two"></div>
-      <div class="sky-overlay"></div>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doğum Günü - Taslak</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="hamburger" aria-label="Menüyü aç" class="icon-btn">☰</button>
+    <h1 id="site-title">Doğum Günü</h1>
+    <button id="favorites-btn" aria-label="Favoriler" class="icon-btn">♡</button>
+  </header>
 
-    <div class="cursor-glow" aria-hidden="true"></div>
+  <main id="app">
+    <section id="welcome" class="center-screen">
+      <h2>Merhaba...</h2>
+      <button id="open-message" class="primary">Tıkla</button>
+      <p class="hint">Daha fazlası için sol üstteki üç çizgiye basabilirsiniz.</p>
+    </section>
+  </main>
 
-    <button class="mute-toggle" type="button" aria-pressed="false" aria-label="Ses aç/kapat">
-      <span class="mute-icon" aria-hidden="true">🔊</span>
-    </button>
+  <nav id="side-menu" class="side-menu hidden" aria-hidden="true">
+    <ul>
+      <li><a href="/siirler" data-link>Şiirler</a></li>
+      <li><a href="/itiraflar" data-link>İtiraflar</a></li>
+      <li><a href="/anilar" data-link>Anılar</a></li>
+      <li><a href="/muzikler" data-link>Müzikler</a></li>
+      <li><a href="/oyunlar" data-link>Oyunlar</a></li>
+      <li><a href="/etimoloji" data-link>Etimoloji</a></li>
+      <li><a href="/geribildirim" data-link>Geri Bildirim</a></li>
+      <li><a href="/temalar" data-link>Temalar</a></li>
+      <li><button id="close-menu" class="link-like">Kapat</button></li>
+    </ul>
+  </nav>
 
-    <main class="page-shell">
-      <section id="introScreen" class="intro-screen" aria-labelledby="introTitle">
-        <div class="intro-content">
-          <p class="intro-kicker">Bir özel günün kapıları açılıyor</p>
-          <h1 id="introTitle" class="intro-title">Jinda'nın hafif ve renkli günü</h1>
-          <p class="intro-copy">
-            Basit ama keyifli bir deneyim. Menüden gezebilir, şiir okuyabilir, müzik açabilir ve kendi metinlerini ekleyebilirsin.
-          </p>
-          <button id="continueButton" class="intro-button" type="button">İçeriğe gir</button>
-        </div>
-      </section>
+  <div id="favorites-popup" class="popup hidden" aria-hidden="true">
+    <h3>Favoriler</h3>
+    <ul id="favorites-list"></ul>
+    <button id="close-favs">Kapat</button>
+  </div>
 
-      <section id="contentScreen" class="content-screen" hidden>
-        <div class="app-shell">
-          <header class="top-bar">
-            <div class="brand">
-              <span class="brand-mark">✦</span>
-              <div>
-                <p class="brand-title">Jinda'nın Günü</p>
-                <p class="brand-subtitle">Basit ve işlevsel kutlama</p>
-              </div>
-            </div>
+  <div id="overlay" class="overlay hidden" data-role="overlay"></div>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menüyü aç">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <nav class="main-nav" aria-label="Ana menü">
-              <a class="nav-link active" href="index.html" data-page="home">Ana Sayfa</a>
-              <a class="nav-link" href="album.html" data-page="album">Albüm</a>
-              <a class="nav-link" href="poem.html" data-page="poem">Şiir</a>
-              <a class="nav-link" href="confession.html" data-page="confession">İtiraf</a>
-              <a class="nav-link" href="surprise.html" data-page="surprise">Sürpriz</a>
-              <a class="nav-link" href="music.html" data-page="music">Müzik</a>
-              <a class="nav-link" href="theme.html" data-page="theme">Tema</a>
-            </nav>
-          </header>
-
-          <section class="panel active">
-            <div class="hero-card">
-              <p class="eyebrow">Ana Sayfa</p>
-              <h2>Bu sayfada her bölüm küçük bir kapı gibi açılıyor.</h2>
-              <p class="lead">
-                Şu an basit ama kullanılabilir bir yapı kurduk. Yeni sayfalara yönlendirme, rastgele şiirler,
-                müzik seçimi ve tema değiştirme işlevleri hazır. Sen sadece metinleri düzenleyip kendi dokunuşunu ekle.
-              </p>
-              <div class="pill-row">
-                <span class="pill">Aşk</span>
-                <span class="pill">Işık</span>
-                <span class="pill">Anı</span>
-              </div>
-            </div>
-
-            <div class="stack-card">
-              <h3>Hızlı seçenekler</h3>
-              <div class="quick-grid">
-                <a class="page-link-card" href="album.html">
-                  <strong>Albüm</strong>
-                  <span>Fotoğraf, anı ve kısa notlar</span>
-                </a>
-                <a class="page-link-card" href="poem.html">
-                  <strong>Şiir</strong>
-                  <span>Rastgele şiir metinleri</span>
-                </a>
-                <a class="page-link-card" href="music.html">
-                  <strong>Müzik</strong>
-                  <span>Rastgele arka plan melodileri</span>
-                </a>
-                <a class="page-link-card" href="theme.html">
-                  <strong>Tema</strong>
-                  <span>Renk ve atmosfer değiştirme</span>
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="/js/storage.js"></script>
+  <script src="/js/app.js"></script>
+</body>
 </html>
