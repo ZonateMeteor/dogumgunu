@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema - Jinda'nın Günü</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="sky-overlay"></div>
+    </div>
+
+    <main class="page-shell">
+      <section class="content-screen is-visible">
+        <div class="app-shell">
+          <header class="top-bar">
+            <div class="brand">
+              <span class="brand-mark">✦</span>
+              <div>
+                <p class="brand-title">Tema</p>
+                <p class="brand-subtitle">Renkleri değiştir</p>
+              </div>
+            </div>
+            <nav class="main-nav" aria-label="Ana menü">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+              <a class="nav-link" href="album.html">Albüm</a>
+              <a class="nav-link" href="poem.html">Şiir</a>
+              <a class="nav-link" href="confession.html">İtiraf</a>
+              <a class="nav-link" href="surprise.html">Sürpriz</a>
+              <a class="nav-link" href="music.html">Müzik</a>
+              <a class="nav-link active" href="theme.html">Tema</a>
+            </nav>
+          </header>
+
+          <section class="panel active">
+            <div class="hero-card">
+              <p class="eyebrow">Tema</p>
+              <h2>Arka planı değiştirmek için bir tema seç.</h2>
+            </div>
+
+            <div class="theme-grid">
+              <button class="theme-option" data-theme="night" type="button">
+                <div class="theme-swatch swatch-night"></div>
+                <h3>Night Sky</h3>
+                <p>Derin mavi ve yıldızlı atmosfer.</p>
+              </button>
+              <button class="theme-option" data-theme="sunset" type="button">
+                <div class="theme-swatch swatch-sunset"></div>
+                <h3>Sunset</h3>
+                <p>Alacakaranlık tonları.</p>
+              </button>
+              <button class="theme-option" data-theme="sakura" type="button">
+                <div class="theme-swatch swatch-sakura"></div>
+                <h3>Sakura</h3>
+                <p>Yumuşak ve romantik bir görünüm.</p>
+              </button>
+              <button class="theme-option" data-theme="ocean" type="button">
+                <div class="theme-swatch swatch-ocean"></div>
+                <h3>Ocean</h3>
+                <p>Serin ve açık bir ton.</p>
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -33,9 +33,9 @@
       <section id="introScreen" class="intro-screen" aria-labelledby="introTitle">
         <div class="intro-content">
           <p class="intro-kicker">Bir özel günün kapıları açılıyor</p>
-          <h1 id="introTitle" class="intro-title">Jinda'nın yıldızlı günü</h1>
+          <h1 id="introTitle" class="intro-title">Jinda'nın hafif ve renkli günü</h1>
           <p class="intro-copy">
-            Hafif, duygu dolu ve zarif bir deneyim. Sessiz bir yolculuğa davet ediliyorsun.
+            Basit ama keyifli bir deneyim. Menüden gezebilir, şiir okuyabilir, müzik açabilir ve kendi metinlerini ekleyebilirsin.
           </p>
           <button id="continueButton" class="intro-button" type="button">İçeriğe gir</button>
         </div>
@@ -48,7 +48,7 @@
               <span class="brand-mark">✦</span>
               <div>
                 <p class="brand-title">Jinda'nın Günü</p>
-                <p class="brand-subtitle">Premium bir kutlama</p>
+                <p class="brand-subtitle">Basit ve işlevsel kutlama</p>
               </div>
             </div>
 
@@ -59,23 +59,23 @@
             </button>
 
             <nav class="main-nav" aria-label="Ana menü">
-              <button class="nav-link active" type="button" data-target="home">Home</button>
-              <button class="nav-link" type="button" data-target="album">Album</button>
-              <button class="nav-link" type="button" data-target="poem">Poem</button>
-              <button class="nav-link" type="button" data-target="confession">İtiraf</button>
-              <button class="nav-link" type="button" data-target="surprise">Sıkıldıysan Buraya Göz At</button>
-              <button class="nav-link" type="button" data-target="music">Müziği Değiştir</button>
-              <button class="nav-link" type="button" data-target="theme">Background Theme</button>
+              <a class="nav-link active" href="index.html" data-page="home">Ana Sayfa</a>
+              <a class="nav-link" href="album.html" data-page="album">Albüm</a>
+              <a class="nav-link" href="poem.html" data-page="poem">Şiir</a>
+              <a class="nav-link" href="confession.html" data-page="confession">İtiraf</a>
+              <a class="nav-link" href="surprise.html" data-page="surprise">Sürpriz</a>
+              <a class="nav-link" href="music.html" data-page="music">Müzik</a>
+              <a class="nav-link" href="theme.html" data-page="theme">Tema</a>
             </nav>
           </header>
 
-          <section id="home" class="panel active" aria-labelledby="homeTitle">
+          <section class="panel active">
             <div class="hero-card">
-              <p class="eyebrow">Home</p>
-              <h2 id="homeTitle">Seni düşündüğüm her anda, bir yıldız gibi huzur buluyorum.</h2>
+              <p class="eyebrow">Ana Sayfa</p>
+              <h2>Bu sayfada her bölüm küçük bir kapı gibi açılıyor.</h2>
               <p class="lead">
-                Bu sayfa, sakin bir atmosferde, duygusal bir teslimiyet ve görsel bir zarafet sunar.
-                Her bölüm, gelecekte geliştirilmek üzere özenle yerleştirilmiş bir sahne gibi duruyor.
+                Şu an basit ama kullanılabilir bir yapı kurduk. Yeni sayfalara yönlendirme, rastgele şiirler,
+                müzik seçimi ve tema değiştirme işlevleri hazır. Sen sadece metinleri düzenleyip kendi dokunuşunu ekle.
               </p>
               <div class="pill-row">
                 <span class="pill">Aşk</span>
@@ -85,167 +85,25 @@
             </div>
 
             <div class="stack-card">
-              <h3>Akış</h3>
-              <p>Yavaş ilerleyen bir hikâye, yumuşak bir dokunuş ve sakin bir parıltı.</p>
-              <div class="mini-list">
-                <div class="mini-item">
-                  <strong>Hafif</strong>
-                  <span>Soft transitions</span>
-                </div>
-                <div class="mini-item">
-                  <strong>Zarif</strong>
-                  <span>Modern glass feel</span>
-                </div>
-                <div class="mini-item">
-                  <strong>Özel</strong>
-                  <span>Emotional layout</span>
-                </div>
+              <h3>Hızlı seçenekler</h3>
+              <div class="quick-grid">
+                <a class="page-link-card" href="album.html">
+                  <strong>Albüm</strong>
+                  <span>Fotoğraf, anı ve kısa notlar</span>
+                </a>
+                <a class="page-link-card" href="poem.html">
+                  <strong>Şiir</strong>
+                  <span>Rastgele şiir metinleri</span>
+                </a>
+                <a class="page-link-card" href="music.html">
+                  <strong>Müzik</strong>
+                  <span>Rastgele arka plan melodileri</span>
+                </a>
+                <a class="page-link-card" href="theme.html">
+                  <strong>Tema</strong>
+                  <span>Renk ve atmosfer değiştirme</span>
+                </a>
               </div>
-            </div>
-          </section>
-
-          <section id="album" class="panel" aria-labelledby="albumTitle">
-            <div class="section-heading">
-              <p class="eyebrow">Album</p>
-              <h2 id="albumTitle">Bir albümün ilk sayfası burada duruyor.</h2>
-            </div>
-            <div class="card-grid">
-              <article class="card photo-card">
-                <div class="placeholder-frame"></div>
-                <h3>Yumuşak Anlar</h3>
-                <p>Fotoğrafın burada yer alacak, şimdi ise bu alan bir sahne gibi hazırlanmış.</p>
-              </article>
-              <article class="card photo-card">
-                <div class="placeholder-frame"></div>
-                <h3>Parıltılı Saatler</h3>
-                <p>Gelecekte burada özel bir anı belirginleşecek.</p>
-              </article>
-              <article class="card photo-card">
-                <div class="placeholder-frame"></div>
-                <h3>Geceye Açılan Kapı</h3>
-                <p>İlham veren bir görsel düzenleme ve sakin bir arka plan.</p>
-              </article>
-            </div>
-          </section>
-
-          <section id="poem" class="panel" aria-labelledby="poemTitle">
-            <div class="section-heading">
-              <p class="eyebrow">Poem</p>
-              <h2 id="poemTitle">Yavaşça dökülen bir şiir.</h2>
-            </div>
-            <div class="poem-card">
-              <div class="poem-scroll">
-                <p class="poem-line">Bir gece, bir yıldız, bir iç çekiş gibi.</p>
-                <p class="poem-line">Her nefesin bir şarkı, her gülüşün bir ışık.</p>
-                <p class="poem-line">Sana dokunmak istemiyorum, sadece sessizce yanında olmak.</p>
-                <p class="poem-line">Çünkü bazı duygular sustuğunda daha da anlam kazanır.</p>
-                <p class="poem-line">Ve sen, bu anlamın en güzel yüzüsün.</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="confession" class="panel" aria-labelledby="confessionTitle">
-            <div class="section-heading">
-              <p class="eyebrow">İtiraf</p>
-              <h2 id="confessionTitle">Sana söylemek istediğim bir şey var.</h2>
-            </div>
-            <div class="confession-card">
-              <p>
-                Bazen kelimeler yetmez. Bazı şeyler yalnızca bir hissin içinde, hafif bir dokunuş gibi taşınır.
-                Senin varlığın, bu sayfanın en güçlü rengi. Ve ben bunu bir gün daha güzel bir biçimde paylaşmayı umuyorum.
-              </p>
-            </div>
-          </section>
-
-          <section id="surprise" class="panel" aria-labelledby="surpriseTitle">
-            <div class="section-heading">
-              <p class="eyebrow">Sıkıldıysan Buraya Göz At</p>
-              <h2 id="surpriseTitle">Gelecekte burada sürprizler yer alacak.</h2>
-            </div>
-            <div class="surprise-grid">
-              <article class="card surprise-card">
-                <h3>Bir kapı</h3>
-                <p>Bir sonraki anın burada açılmasını bekliyor.</p>
-              </article>
-              <article class="card surprise-card">
-                <h3>Bir hatıra</h3>
-                <p>Yavaşça ortaya çıkacak bir dokunuş.</p>
-              </article>
-              <article class="card surprise-card">
-                <h3>Bir mesaj</h3>
-                <p>Özel bir söz, özel bir zaman, özel bir his.</p>
-              </article>
-            </div>
-          </section>
-
-          <section id="music" class="panel" aria-labelledby="musicTitle">
-            <div class="section-heading">
-              <p class="eyebrow">Müziği Değiştir</p>
-              <h2 id="musicTitle">Şimdilik bir arka plan akışı hazırlanmış durumda.</h2>
-            </div>
-            <div class="music-shell">
-              <div class="music-card current-song-card">
-                <div class="album-art"></div>
-                <div>
-                  <h3>Şu anki akış</h3>
-                  <p>Yıldızlı bir gece melodisi</p>
-                  <span class="song-meta">Arka plan · sakin · ambient</span>
-                </div>
-              </div>
-
-              <div class="music-card playlist-card">
-                <h3>Çalma listesi</h3>
-                <ul class="playlist-list">
-                  <li>Özel bir melodi</li>
-                  <li>Yavaş bir ritim</li>
-                  <li>Geceye ait bir dokunuş</li>
-                </ul>
-              </div>
-
-              <div class="control-row">
-                <button class="control-btn" type="button">◀</button>
-                <button class="control-btn control-btn-play" type="button">▶</button>
-                <button class="control-btn" type="button">▶▶</button>
-              </div>
-            </div>
-          </section>
-
-          <section id="theme" class="panel" aria-labelledby="themeTitle">
-            <div class="section-heading">
-              <p class="eyebrow">Background Theme</p>
-              <h2 id="themeTitle">Bir sonraki bölümde tema seçenekleri hazır olacak.</h2>
-            </div>
-            <div class="theme-grid">
-              <article class="theme-card">
-                <div class="theme-swatch swatch-night"></div>
-                <h3>Night Sky</h3>
-                <p>Derin mavi ve yıldızlı bir atmosfer.</p>
-              </article>
-              <article class="theme-card">
-                <div class="theme-swatch swatch-purple"></div>
-                <h3>Purple Dream</h3>
-                <p>Mor bir serap ve yumuşak bir parıltı.</p>
-              </article>
-              <article class="theme-card">
-                <div class="theme-swatch swatch-sakura"></div>
-                <h3>Sakura</h3>
-                <p>Gül rengi bir dokunuş ve nazik bir his.</p>
-              </article>
-              <article class="theme-card">
-                <div class="theme-swatch swatch-galaxy"></div>
-                <h3>Galaxy</h3>
-                <p>Uzay hissiyle dolu, büyüleyici bir görünüm.</p>
-              </article>
-              <article class="theme-card">
-                <div class="theme-swatch swatch-sunset"></div>
-                <h3>Sunset</h3>
-                <p>Alacakaranlık tonlarıyla sakin bir geçiş.</p>
-              </article>
-              <article class="theme-card">
-                <div class="theme-swatch swatch-ocean"></div>
-                <h3>Ocean</h3>
-                <p>Mavi ve berrak, serin bir ruh hali.</p>
-              </article>
             </div>
           </section>
         </div>
