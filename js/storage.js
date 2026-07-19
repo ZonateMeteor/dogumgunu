@@ -1,4 +1,4 @@
-// storage.js - localStorage helpers
+// storage.js - localStorage helpers (unchanged)
 const Storage = {
   get(key, def){
     try{const v=localStorage.getItem(key);return v?JSON.parse(v):def}catch(e){return def}
