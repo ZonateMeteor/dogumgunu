@@ -1,1 +1,4 @@
-Bu bir örnek mp3 dosyası yer tutucusudur. Lütfen gerçek mp3 dosyalarla değiştirin: /assets/muzikler/sample5.mp3
+This is a placeholder file for sample5.mp3.
+Replace this file with a real MP3 file named sample5.mp3 in the same path: /assets/muzikler/sample5.mp3
+
+Recommended: add small (1-3s) royalty-free MP3s. The player expects files at /assets/muzikler/<filename>.
